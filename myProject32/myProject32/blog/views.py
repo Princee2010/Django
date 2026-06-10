@@ -13,8 +13,8 @@ from django.template.loader import render_to_string
 
 def send_bulk_email(request):
     subject = "Welcome to Our Platform"
-    from_email = "mohitdecodes@gmail.com"
-    recipient_list = ["mohit.djcet@gmail.com", "mohit.djce2@gmail.com"]
+    from_email = "mail@gmail.com"
+    recipient_list = ["mail.djcet@gmail.com", "mail.djce2@gmail.com"]
 
     html_content = render_to_string('welcome_email.html', {'username': 'Mohit'})
 
