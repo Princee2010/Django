@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %} About Page {% endblock %}
+
+{% block content %}
+    <h1>About Us</h1>
+    <p>This is the about page content.</p>
+    <p>We are a team of passionate developers creating amazing web applications.</p>
+    {% regroup students by class as grouped_list %}
+
+{% endblock %}
+

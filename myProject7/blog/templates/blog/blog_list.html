@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>#3 Template Basic</title>
+</head>
+<body>
+<h1>Blog List</h1>
+
+    <p><b>If else</b></p>
+    {% if blogs.0.is_featured %}
+    <li>{{ blogs.0.title }}</li>
+    {% else %}
+    <li>No featured blog yet.</li>
+    {% endif %}
+    
+    <p><b>For loop</b></p>
+    <ul>
+    {% for blog in blogs %}
+    <li>{{ forloop.counter }}. {{ blog.title }} - {{ blog.author }}</li>
+    {% endfor %}
+    </ul>
+
+    <p><b>With</b></p>
+    {% with total_blogs=blogs|length %}
+    <p>Total blogs: {{ total_blogs }}</p>
+    {% endwith %}
+
+    <p><b>Cycle</b></p>
+    <h2>Blog Table</h2>
+    <Table border="1" cellpadding="5" cellspacing="0">
+        <tr style="background-color: {% cycle 'lightgray' 'white' %};">
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+        {% for blog in blogs %}
+        <tr style="background-color: {% cycle 'lightgray' 'white' %};">
+            <td>{{ blog.title }}</td>
+            <td>{{ blog.author }}</td>
+        </tr>
+        {% endfor %}
+    </Table>
+
+    <p><b>Firstof</b></p>  
+    <p>Author:{% firstof blogs.0.author "Unknown Author" %}</p>
+
+    <p><b>Verbatim</b></p>
+    {% verbatim  %}
+    <p>Author:{{ blogs.1.author}}</p>
+    {% endverbatim  %}
+
+    <p><b>autoscape</b></p>
+    <p>deafult(safe  escaped): {{html_code}}
+    
+
+</body>
+</html>

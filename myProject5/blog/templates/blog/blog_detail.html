@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>#2 Template Basic</title>
+</head>
+<body>
+<h1>Blog Detail</h1>
+<hr>
+<p><b>Title(Normal):</b> {{post.title}}</p>
+<p><b>Title(Uppercase):</b> {{post.title|upper}}</p>
+<p><b>Title(Lowercase):</b> {{post.title|lower}}</p>
+<p><b>Title(Titlecase):</b> {{post.title|title}}</p>
+<p><b>Title(Length):</b> {{post.title|length}}</p>
+<p><b>Title(Truncate):</b> {{post.title|truncatechars:20}}</p>
+<p><b>Title(Truncate Words):</b> {{post.title|truncatewords:2}}</p>
+<p><b>Title(Line breaks):</b> {{post.title|linebreaks}}</p>
+<p><b>Title(Line breaks br):</b> {{post.title|linebreaksbr}}</p>
+<hr>
+<p><b>Original Price:</b> {{post.price}}</p>
+<p><b>Price with (+5):</b> {{post.price|add:5}}</p>
+<p><b>Price with (-5):</b> {{post.price|add:-5}}</p>
+{% comment %} <p><b>Price with (*2):</b> {{post.price|multiplyby:2}}</p> {% endcomment %}
+{%if post.number|divisibleby:2%}
+<p>{{post.number}} is even</p>
+{%else%}
+<p>{{post.number}} is odd</p>
+{%endif %}
+
+<hr>
+{% comment %} list filter {% endcomment %}
+
+<p><b>List Tags:</b></p>
+<p><b>First:</b> {{post.tags|first}}</p>
+<p><b>Last:</b> {{post.tags|last}}</p>
+<p><b>Length:</b> {{post.tags|length}}</p>
+<p><b>Joined:</b> {{post.tags|join:", "}}</p>
+<p><b>Sliced:</b> {{post.tags|slice:":2"}}</p>
+<hr>
+
+<p>Author Available? : {{post.author|yesno:"yes,no,MayBe"}}</p>
+<p> Comments counts? : {{post.comments_count}} Comment{{post.comments_count|pluralize}}</p>
+
+
+<hr>
+<p>Date and Time </p>
+<p><b>Original:</b> {{post.created_at}}</p>
+<p><b>Formated Date: {{post.created_at|date:"D d M Y"}}</b></p>
+<p><b>Date:</b> {{post.created_at|date:"Y-m-d"}}</p>
+<p><b>Time:</b> {{post.created_at|time:"H:i:s"}}</p>
+<p><b>Year:</b> {{post.created_at|date:"Y"}}</p>
+<p><b>Month:</b> {{post.created_at|date:"F"}}</p>
+<p><b>Day:</b> {{post.created_at|date:"d"}}</p>
+<p><b>Day:</b> {{post.created_at|timesince}}</p>
+<p><b>Day:</b> {{post.created_at|timeuntil}}</p>
+
+<hr>
+
+<p>Encodeing and formatting</p>
+<p><b>Title Encoding:</b> {{post.title|urlencode}}</p>
+<p><b>Title Formatting:</b> {{12.255896325523|floatformat:2}}</p>
+
+
+</body>
+</html>

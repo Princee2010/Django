@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{%block title%} My Site {%endblock%}</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+ {% include "navbar.html" %}
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<footer>
+    <p>Copyright 2024</p>
+</footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html> 

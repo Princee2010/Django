@@ -1,0 +1,40 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 10px;
+    background-color: #333;
+    display: flex;
+}
+
+nav ul li{
+    margin-right: 20px;
+}
+
+nav ul li a{
+    color: blueviolet;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+img{
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+h1{
+    color: blue;
+}
+
+
+ul{
+    text-align: left;
+}

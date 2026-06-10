@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>#1 Template Basic</title>
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+    <p>This is the home page.</p>
+    {% comment%}
+    This is a comment in the template.
+    {% endcomment %}
+
+    {# This is another way to write comments in Django templates #}
+<p>Name: {{ name }}</p>
+<p>Age: {{ age }}</p>
+<p> First skill: {{ skills.0 }}</p>
+<p> Second skill: {{ skills.1 }}</p>
+<p> Third skill: {{ skills.2 }}</p>
+
+<p>User Name: {{ user.name }}, User Age: {{ user.age }}</p>
+
+<h2>Title : {{ blog.title }}</h2>
+<p>Content: {{ blog.content | safe }}</p>
+<p>Created At: {{ blog.created_at }}</p>
+
+<p>default value : {{ empty_value | default:"This is default value" }}</p>
+<p>default value : {{ empty_value | default_if_none:"No Data" }}</p>
+
+</body>
+</html>
