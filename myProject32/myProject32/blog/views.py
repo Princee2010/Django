@@ -3,9 +3,9 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string
 
 # def send_bulk_email(request):
-#     messages1 = ('Wecome User 1', 'Hello User 1, welcome to our platform.', 'mohitdecodes@gmail.com', ['mohit.djcet@gmail.com'])
-#     messages2 = ('Wecome User 2', 'Hello User 2, welcome to our platform.', 'mohitdecodes@gmail.com', ['mohit.djcet1@gmail.com'])
-#     messages3 = ('Wecome User 3', 'Hello User 3, welcome to our platform.', 'mohitdecodes@gmail.com', ['mohit.djcet2@gmail.com'])
+#     messages1 = ('Wecome User 1', 'Hello User 1, welcome to our platform.', 'mail1@gmail.com', ['mail.djcet@gmail.com'])
+#     messages2 = ('Wecome User 2', 'Hello User 2, welcome to our platform.', 'mail2@gmail.com', ['mail.djcet1@gmail.com'])
+#     messages3 = ('Wecome User 3', 'Hello User 3, welcome to our platform.', 'mail3@gmail.com', ['mail.djcet2@gmail.com'])
 
 #     send_mass_mail((messages1, messages2, messages3), fail_silently=False)
 
