@@ -8,8 +8,8 @@ def send_welcome_email(sender, instance, created, **kwargs):
     if created:
        print(f"New user created: {instance.username}")
 
-       subject = "Welcome to Mohit Kumar!"
-       message = f"Hi {instance.username}, thank you for registering at Mohit Kumar Blog."
+       subject = "Welcome to here!"
+       message = f"Hi {instance.username}, thank you for registering at Blog."
        from_email = "princeebhingradiya20@gmail.com"
        recipient_list = [instance.email]
 
